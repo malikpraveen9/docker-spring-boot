@@ -1,4 +1,14 @@
 # Deploy to Azure Kubernetes Service
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Azure subscription 1(46d296fb-ce23-4abd-92fe-c5ac957449c1)'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 # Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 

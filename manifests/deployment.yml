@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: malikpraveendockerspringboot 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: malikpraveendockerspringboot
+  template:
+    metadata:
+      labels:
+        app: malikpraveendockerspringboot 
+    spec:
+      containers:
+        - name: malikpraveendockerspringboot 
+          image: praveenacrrepo.azurecr.io/malikpraveendockerspringboot
+          ports:
+          - containerPort: 8080
